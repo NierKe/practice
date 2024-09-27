@@ -1,5 +1,6 @@
 package com.dk.ioc;
 
+import com.dk.equals.StudentVO;
 import org.apache.catalina.core.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class AopTest {
@@ -12,5 +13,6 @@ public class AopTest {
         System.out.println(bean.mul(6,5));
         System.out.println(bean.sub(6,5));
         System.out.println(3*0.1);
+        System.out.println(StudentVO.num);
     }
 }

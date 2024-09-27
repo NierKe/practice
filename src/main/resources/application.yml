@@ -3,10 +3,12 @@ spring:
     #????
     cache: false
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seckill?useUnicode=true&characterEcoding=UTF-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: root
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: oracle.jdbc.OracleDriver
+    #url: jdbc:mysql://localhost:3306/seckill?useUnicode=true&characterEcoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:oracle:thin:@123.235.9.198:61521:orcl
+    username: ncc0617
+    password: ncc0617
     hikari:
       #???name
       pool-name: DateHikariCP
@@ -30,7 +32,7 @@ mybatis-plus:
   #mapper.xml????
   mapper-locations: classpath*:/mapper/*Mapper.xml
   #??mybatis?????????????????
-  type-aliases-package: com.dk.seckill.pojo
+  type-aliases-package: com.example.entity
 
 #Mybatis SQL??????????????mapper.xml?
 logging:

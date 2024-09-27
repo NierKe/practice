@@ -11,7 +11,8 @@ public class Practise {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("张三","李四","王五","赵六","董科","王天宇","王子长","张岳强","杨金刚","刘贞宜");
         Stream<String> stream = list.stream();
-        stream.filter((String name) -> {return name.startsWith("王");});
+        List<String> newList = stream.filter(x -> x.startsWith("王")).collect(Collectors.toList());
+        System.out.println(newList);
 
         Map<String,String> map1 = new HashMap<>();
         Map<String,String> map2 = new HashMap<>();

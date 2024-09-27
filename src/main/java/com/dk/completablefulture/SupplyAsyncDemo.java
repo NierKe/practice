@@ -11,8 +11,7 @@ public class SupplyAsyncDemo {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         CommonUtils.printThreadLog("main start");
         CompletableFuture<String> newFuture = CompletableFuture.supplyAsync(() ->{
-            String content = CommonUtils.readFile("D:\\work\\practice\\demo1-master\\src\\new.txt");
-            return content;
+            return CommonUtils.readFile("D:\\work\\practice\\demo1-master\\src\\new.txt");
         },executorService);
         CommonUtils.printThreadLog("here not block! main continue");
         String news = newFuture.get();
