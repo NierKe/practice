@@ -1,9 +1,12 @@
 package com.dk.localdate;
 
 import com.dk.thissuper.Student;
+import org.checkerframework.checker.units.qual.A;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Test {
@@ -29,5 +32,16 @@ public class Test {
                 .map(Student::getSchool)
                 .orElseGet(vo2::getSchool);
         System.out.println(s);
+
+        List list = new ArrayList();
+
+
+        String zy = "|TD20241010111|尼斯阿|达";
+        //截取str 第一个| 第二个| 之间的内容
+        String tradeCode = "";
+
+        tradeCode = zy.substring(zy.indexOf("|")+1,zy.indexOf("|",zy.indexOf("|")+1));
+        tradeCode = tradeCode.replace("TD20","内");
+        System.out.println(tradeCode);
     }
 }
